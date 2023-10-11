@@ -96,6 +96,15 @@ hr.h-color {
   background: #fff;
 }
 
+.dropdown-open a{
+  color: #fff;
+ }
+
+ .dropdown-open a:hover {
+  background: var(--bg-orange);
+  border-radius: 8px;
+ }
+
 @media (max-width: 767px) {
   #side_nav {
       margin-left: -250px;
