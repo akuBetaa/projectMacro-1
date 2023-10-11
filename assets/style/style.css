@@ -92,6 +92,7 @@ hr.h-color {
   color: var(--color-text);
 }
 
+
 .content nav {
   background: #fff;
 }
@@ -105,7 +106,7 @@ hr.h-color {
   border-radius: 8px;
  }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   #side_nav {
       margin-left: -250px;
       position: absolute;
@@ -118,4 +119,8 @@ hr.h-color {
   }
 
   
+.card-dash {
+  display: block;
+}
+
 }
