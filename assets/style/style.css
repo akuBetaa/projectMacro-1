@@ -32,7 +32,7 @@ hr.h-color {
   background: #eee;
 }
 
-.sidebar li.active, .sim {
+.sidebar li:hover {
   background: var(--bg-orange);
   border-radius: 8px;
 }
