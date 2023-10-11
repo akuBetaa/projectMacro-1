@@ -17,20 +17,17 @@ body {
 }
 
 /*------------ Login container ------------*/
-
 .box-area{
     width: 930px;
     background-color:  orange;
 }
 
 /*------------ Right box ------------*/
-
 .right-box{
     padding: 40px 30px 40px 40px;
 }
 
 /*------------ Custom Placeholder ------------*/
-
 ::placeholder{
     font-size: 16px;
 }
@@ -44,7 +41,6 @@ body {
 
 
 /*------------ For small screens------------*/
-
 @media only screen and (max-width: 768px){
 
      .box-area{
@@ -61,14 +57,16 @@ body {
 
 }
 
+
+/* Sidebar dashboard */
 /* sidebar */
-
-
 #side_nav {
   background: var(--bg-dashboard);
   min-width: 250px;
   max-width: 250px;
   transition: all 0.3s;
+  min-height: 100vh;
+  /* width: 100%; */
 }
 
 .content {
@@ -80,7 +78,7 @@ hr.h-color {
   background: #eee;
 }
 
-.sidebar li:hover {
+.sidebar li:hover, .sidebar li.active {
   background: var(--bg-orange);
   border-radius: 8px;
 }
