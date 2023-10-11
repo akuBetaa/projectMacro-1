@@ -16,6 +16,54 @@ body {
   background: #f1f1f1;
 }
 
+/*------------ Login container ------------*/
+
+.box-area{
+    width: 930px;
+    background-color:  orange;
+}
+
+/*------------ Right box ------------*/
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+/*------------ Custom Placeholder ------------*/
+
+::placeholder{
+    font-size: 16px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+
+/*------------ For small screens------------*/
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
+}
+
+/* sidebar */
+
+
 #side_nav {
   background: var(--bg-dashboard);
   min-width: 250px;
