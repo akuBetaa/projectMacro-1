@@ -81,4 +81,9 @@ hr.h-color {
   display: block;
 }
 
+nav .breadcrumb {
+  background : var(--bg-dashboard);
+}
+
+
 }
