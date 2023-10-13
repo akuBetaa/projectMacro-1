@@ -1,14 +1,28 @@
-// Menggunakan JavaScript untuk memuat dan menampilkan sidebar
+// Menggunakan JavaScript untuk memuat dan menampilkan sidebar user
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("sidebar.html")
+    fetch("/dashboard-user/sidebar.html")
         .then(response => response.text())
         .then(data => {
-            document.getElementById("side_nav-placeholder").innerHTML = data;
+            document.getElementById("sidebar-user").innerHTML = data;
         });
 });
 
 
+// Menggunakan JavaScript untuk memuat dan menampilkan sidebar admin
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("/admin/sidebar-admin.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("sidebar-admin").innerHTML = data;
+        });
+});
 
+
+//LOgin
+
+
+
+//Side Bar
 $(".sidebar ul li").on("click", function () {
     $(".sidebar ul li.active").removeClass("active");
     $(this).addClass("active");

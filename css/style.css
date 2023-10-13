@@ -18,7 +18,7 @@ body {
 
 /* Sidebar dashboard */
 /* sidebar */
-#side_nav {
+#sidebar-user, #sidebar-admin {
   background: var(--bg-dashboard);
   min-width: 250px;
   max-width: 250px;
@@ -40,11 +40,6 @@ hr.h-color {
   background: var(--bg-orange);
   border-radius: 8px;
 }
-
-/* .sidebar li.active a,
-.sidebar li.active a:hover {
-  color: #000;
-} */
 
 .sidebar li a {
   color: var(--color-text);
@@ -85,5 +80,8 @@ nav .breadcrumb {
   background : var(--bg-dashboard);
 }
 
+.aku img {
+  height: 300px;
+}
 
 }
