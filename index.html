@@ -63,15 +63,15 @@
           </div>
           <div class="input-group mb-4 d-flex justify-content-between">
             <div class="form-check">
-              <input type="radio" class="form-check-input" id="adminCheckbox" />
-              <label for="formCheck" class="form-check-label text-secondary">
-                <small>Admin</small>
-              </label>
-            </div>
-            <div class="form-check">
               <input type="radio" class="form-check-input" id="waliMuridCheckbox" />
               <label for="formCheck" class="form-check-label text-secondary">
                 <small>Wali Murid</small>
+              </label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" id="adminCheckbox" />
+              <label for="formCheck" class="form-check-label text-secondary">
+                <small>Admin</small>
               </label>
             </div>
           </div>
@@ -98,10 +98,10 @@
     loginButton.addEventListener("click", function () {
       if (adminCheckbox.checked) {
         // Redirect to the admin page if the admin checkbox is checked
-        window.location.href = "/admin/index.html";
+        window.location.href = "./admin/dashboard-admin.html";
       } else if (waliMuridCheckbox.checked) {
         // Redirect to the user dashboard if the wali murid checkbox is checked
-        window.location.href = "/dashboard-user/index.html";
+        window.location.href = "./dashboard-user/index.html";
       } else {
         // Handle the case when neither checkbox is checked (you can add your own logic here)
         alert("Please select a user type (Admin or Wali Murid).");

@@ -60,14 +60,14 @@ hr.h-color {
  }
 
 @media (max-width: 900px) {
-  #side_nav {
+  #sidebar-admin, #sidebar-user {
       margin-left: -250px;
       position: absolute;
       min-height: 100vh;
       z-index: 1;
   }
 
-  #side_nav.active {
+  #sidebar-admin.active, #sidebar-user.active {
       margin-left: 0;
   }
 
