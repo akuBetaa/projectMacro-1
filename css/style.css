@@ -59,7 +59,7 @@ hr.h-color {
   border-radius: 8px;
  }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   #sidebar-admin, #sidebar-user {
       margin-left: -250px;
       position: absolute;

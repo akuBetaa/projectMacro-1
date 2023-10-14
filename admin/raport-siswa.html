@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" />
 
     <!-- font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <title>Dasboard | Beta</title>
 
@@ -40,17 +40,17 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fal fa-bars"></i>
                     </button>
+
                     <div class="collapse navbar-collapse justify-content-end my-2" id="navbarSupportedContent">
                         <div class="navbar-nav mb-2 mb-lg-0 ml-3 d-flex align-items-center">
                             <img src="/img/icon-dash-siswa.png" alt="Foto User"
-                                class="img-thumbnail rounded-circle mx-2" style="max-width: 50px;">
+                                class="img-thumbnail rounded-circle mx-2" style="max-width: 50px" />
                             <div class="nav-item no-arrow">
                                 <p class="mb-0">Admin</p>
                                 <span class="">Beta Nurul Awwalin</span>
-                            </div>
+                            </div> 
                         </div>
                     </div>
-
                 </div>
             </nav>
 
@@ -60,30 +60,37 @@
 
                 <!-- memilih kelas yang akan ditampilkan -->
                 <div class="card m-4">
-                    <h5 class="card-header" style="background-color: #FF8A00; color: white;">Pilih Kelas</h5>
+                    <h5 class="card-header" style="background-color: #ff8a00; color: white">
+                        Pilih Kelas
+                    </h5>
                     <!-- Form masukkan tahun ajar, semester, dan kelas + klik tampil -->
-                    <div class="card-body ">
+                    <div class="card-body">
                         <form class="">
                             <div class="mb-3 d-flex align-items-center">
-                                <label for="tahunAjar" class="form-label me-2">Tahun Ajaran :</label>
-                                <select class="form-select w-auto" id="tahunAjar" aria-label="Default select example">
+                                <label for="tahunAjar" class="form-label me-2 col-4 col-sm-2">Tahun Ajaran</label>
+                                <div class="col-2 col-sm-1">:</div>
+                                <select class="form-select w-auto col-6 col-sm-4" id="tahunAjar"
+                                    aria-label="Default select example">
                                     <option selected>Pilih ...</option>
-                                    <option value="1">2022/2023</option>
-                                    <option value="2">2021/2022</option>
+                                    <option value="1">2023/2024</option>
+                                    <option value="2">2022/2023</option>
+                                    <option value="3">2021/2022</option>
                                 </select>
                             </div>
 
                             <div class="mb-3 d-flex align-items-center">
-                                <label for="semesterAjar" class="form-label me-2">Semester :</label>
-                                <select class="form-select w-auto" aria-label="Default select example">
+                                <label for="semesterAjar" class="form-label me-2 col-4 col-sm-2">Semester</label>
+                                <div class="col-2 col-sm-1">:</div>
+                                <select class="form-select w-auto col-6 col-sm-4" aria-label="Default select example">
                                     <option selected>Pilih ...</option>
                                     <option value="1">Ganjil</option>
                                     <option value="2">Genap</option>
                                 </select>
                             </div>
                             <div class="mb-3 d-flex align-items-center">
-                                <label for="kelas" class="form-label me-2">Kelas :</label>
-                                <select class="form-select w-auto" aria-label="Default select example">
+                                <label for="kelas" class="form-label me-2 col-4 col-sm-2">Kelas</label>
+                                <div class="col-2 col-sm-1">:</div>
+                                <select class="form-select w-auto col-6 col-sm-4" aria-label="Default select example">
                                     <option selected>Pilih ...</option>
                                     <option value="1">I</option>
                                     <option value="2">II</option>
@@ -93,51 +100,106 @@
                                     <option value="2">VI</option>
                                 </select>
                             </div>
-                            <button type="submit" class="form-raport btn btn-primary"
-                                style="background-color: #FF8A00;">Tampilkan</button>
+                            <button type="submit" class="form-raport btn btn-primary" style="background-color: #ff8a00">
+                                Tampilkan
+                            </button>
                         </form>
                     </div>
-
-
                 </div>
 
                 <div class="card m-4">
-                    <h5 class="card-header" style="background-color: #FF8A00; color: white;">Data Raport Siswa</h5>
+                    <h5 class="card-header" style="background-color: #ff8a00; color: white">
+                        Data Raport Siswa
+                    </h5>
                     <!-- Tampilan Raport Siswa -->
-                    <div class="card-body ">
+                    <div class="card-body">
                         <!-- Keterangan yang ditampilkan  -->
-                        <div class="container">
+                        <div class="container mb-4">
                             <div class="row">
-                              <div class="col-4 col-sm-2">Tahun Ajaran</div>
-                              <div class="col-2 col-sm-1">:</div>
-                              <div class="col-6 col-sm-4">2023/2024</div>
+                                <div class="col-4 col-sm-2">Tahun Ajaran</div>
+                                <div class="col-2 col-sm-1">:</div>
+                                <div class="col-6 col-sm-4">2023/2024</div>
 
-                              <div class="w-100 d-none d-md-block"></div>
-                              <div class="col-4 col-sm-2">Semester</div>
-                              <div class="col-2 col-sm-1">:</div>
-                              <div class="col-6 col-sm-4">Ganjil</div>
+                                <div class="w-100 d-none d-md-block"></div>
+                                <div class="col-4 col-sm-2">Semester</div>
+                                <div class="col-2 col-sm-1">:</div>
+                                <div class="col-6 col-sm-4">Ganjil</div>
 
-                              <div class="w-100 d-none d-md-block"></div>
-                              <div class="col-4 col-sm-2">Kelas</div>
-                              <div class="col-2 col-sm-1">:</div>
-                              <div class="col-6 col-sm-4">VI</div>
-                              
+                                <div class="w-100 d-none d-md-block"></div>
+                                <div class="col-4 col-sm-2">Kelas</div>
+                                <div class="col-2 col-sm-1">:</div>
+                                <div class="col-6 col-sm-4">VI</div>
                             </div>
-                          </div>
+                        </div>
 
-                          <hr>
+                        <hr />
 
-                          <!-- Tabel data raport siswa  -->
-                          <div class="table-responsive">
+                        <!-- Tabel data raport siswa  -->
+                        <div class="table-responsive">
                             <table class="table">
-                              ...
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">NIS</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Kelas</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider">
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>211001</td>
+                                            <td>Beta Nurul Awwalin</td>
+                                            <td>VI</td>
+                                            <td>
+                                                <a href="raport-siswa-beta.html">
+                                                    <button type="button" class="btn btn-success">
+                                                        Tampil
+                                                    </button>
+                                                </a>
+                                                <button type="button" class="btn btn-danger">
+                                                    Unduh
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>211001</td>
+                                            <td>Beta Nurul Awwalin</td>
+                                            <td>VI</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success">
+                                                    Tampil
+                                                </button>
+                                                <button type="button" class="btn btn-danger">
+                                                    Unduh
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>211001</td>
+                                            <td>Beta Nurul Awwalin</td>
+                                            <td>VI</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success">
+                                                    Tampil
+                                                </button>
+                                                <button type="button" class="btn btn-danger">
+                                                    Unduh
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </table>
-                          </div>
+                        </div>
                     </div>
                 </div>
 
-
-                <hr>
+                <hr />
 
                 <div class="text text-center">
                     <p>Copyright @2023 WebDev B. All rights reserved</p>
@@ -151,7 +213,6 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
-
 </body>
 
 </html>
