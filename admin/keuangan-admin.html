@@ -56,123 +56,94 @@
             <!-- Isi Konten di Bawah -->
             <div class="dashboard-content">
                 <h2 class="fs-4 m-4">Laporan Keuangan</h2>
-                
                 <div class="card m-4">
-                    <h5 class="card-header" style="background-color: #ff8a00; color: white">
-                        Pilih Kelas
-                    </h5>
-
-                    <!-- Form masukkan tahun ajar, semester, dan kelas + klik tampil -->
-                    <div class="card-body">
-                        <!-- Dropdown untuk memilih kelas -->
-                    <select id="kelasDropdown" class="form-select my-3">
-                        <option value="">Pilih Kelas</option>
-                        <option value="1">Kelas 1</option>
-                        <option value="2">Kelas 2</option>
-                        <option value="3">Kelas 3</option>
-                        <option value="4">Kelas 4</option>
-                        <option value="5">Kelas 5</option>
-                        <option value="6">Kelas 6</option>
-                    </select>
-            
-                    <!-- Dropdown untuk memilih nama siswa -->
-                   
-            
-                    <!-- Tabel Jadwal Pelajaran -->
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Jam</th>
-                                <th>Senin</th>
-                                <th>Selasa</th>
-                                <th>Rabu</th>
-                                <th>Kamis</th>
-                                <th>Jumat</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableBody">
-                            <!-- Data Jadwal Pelajaran akan diisi melalui JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-            
-                <script>
-                    // Data jadwal pelajaran contoh
-                    const jadwalPelajaran = {
-                        kelas1: {
-                            siswa1: {
-                                jam: '08:00 - 09:30', 
-                                senin: 'Matematika',
-                                selasa: 'Bahasa Inggris',
-                                rabu: 'Seni',
-                                kamis: 'Pendidikan Jasmani',
-                                jumat: 'Bahasa Indonesia',
-                            },
-                       
-                        },
-                        kelas2: {
-                            siswa2: {
-                                jam: '08:00 - 09:30', 
-                                senin: 'Matematika',
-                                selasa: 'Bahasa Inggris',
-                                rabu: 'Seni',
-                                kamis: 'Pendidikan Jasmani',
-                                jumat: 'Bahasa Indonesia',
-                            },
-                     
-                        },
-                        // Tambahkan data jadwal pelajaran untuk kelas 2, 3, 4, 5, dan 6 di sini
-                    };
-            
-                    // Fungsi untuk memperbarui tabel jadwal pelajaran
-                    function updateJadwalPelajaran(kelas, siswa) {
-                        const tableBody = document.getElementById('tableBody');
-                        tableBody.innerHTML = '';
-            
-                        const data = jadwalPelajaran[`kelas${kelas}`][siswa];
-                        let no = 1;
-            
-                        for (let hari in data) {
-                            if (hari === 'jam') {
-                                continue;
-                            }
-            
-                            const row = document.createElement('tr');
-                            row.innerHTML = `
-                                <td>${no++}</td>
-                                <td>${data.jam}</td>
-                                <td>${data[hari]}</td>
-                                <td>${data[hari]}</td>
-                                <td>${data[hari]}</td>
-                                <td>${data[hari]}</td>
-                                <td>${data[hari]}</td>
-                               
-                           
-                            `;
-                            tableBody.appendChild(row);
-                        }
-                    }
-            
-                    // Inisialisasi tabel dengan jadwal pelajaran kelas 1 dan nama siswa 1
-                    updateJadwalPelajaran(1, 'siswa1');
-            
-                    // Fungsi untuk mengatur event listener pada dropdown kelas
-                    document.getElementById('kelasDropdown').addEventListener('change', () => {
-                        const selectedKelas = document.getElementById('kelasDropdown').value;
-                        // const selectedSiswa = document.getElementById('siswaDropdown').value;
-                        updateJadwalPelajaran(selectedKelas);
-                    });
-            
-                    // Fungsi untuk mengatur event listener pada dropdown nama siswa
-                    document.getElementById('siswaDropdown').addEventListener('change', () => {
-                        const selectedKelas = document.getElementById('kelasDropdown').value;
-                        // const selectedSiswa = document.getElementById('siswaDropdown').value;
-                        updateJadwalPelajaran(selectedKelas);
-                    });
-                </script>
+                    <div class="d-flex m-4 justify-content-between">
+                        <input type="text" id="searchInput" class="form-control w-auto" placeholder="Search...">
+                        <button class="btn" id="showButton" style="background-color: #FF8A00; color: white;">Show All</button>
+                        <!-- <a href="input-data-siswa.html" class="btn" style="background-color: #FF8A00; color: white;">Tambah Data Siswa</a> -->
                     </div>
                 </div>
+                
+
+                <div class="card m-4">
+                    <div class="card-body">
+                        <div class="table-responsive mt-4">
+                            <table class="table table-bordered table-striped dataTable" data-sort="">
+                                <thead style="background-color: #FF8A00">
+                                    <tr>
+                                        <th style="color: white;">No</th>
+                                        <th style="color: white;">Nama</th>
+                                        <th style="color: white;">Nomor Bayar</th>
+                                        <th style="color: white;">Tanggal Bayar</th>
+                                        <th style="color: white;">Jumlah</th>
+                                        <th style="color: white;">Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody">
+                                    <!-- Data Tabel akan diisi melalui JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                
+                    <script>
+                        // Data contoh untuk tabel
+                        const data = [
+                            { no: 1, nama: 'John', nomorBayar: '1234', tanggalBayar: '2023-09-15', jumlah: 500, keterangan: 'Lunas' },
+                            { no: 2, nama: 'Jane', nomorBayar: '5678', tanggalBayar: '2023-09-16', jumlah: 750, keterangan: 'Belum Lunas' },
+                            { no: 3, nama: 'Dani', nomorBayar: '1432', tanggalBayar: '2023-09-15', jumlah: 500, keterangan: 'Lunas' },
+                            { no: 4, nama: 'Dina', nomorBayar: '6754', tanggalBayar: '2023-09-16', jumlah: 750, keterangan: 'Belum Lunas' },
+                            { no: 5, nama: 'Riko', nomorBayar: '9087', tanggalBayar: '2023-09-15', jumlah: 500, keterangan: 'Lunas' },
+                            { no: 6, nama: 'Jajang', nomorBayar: '6457', tanggalBayar: '2023-09-16', jumlah: 750, keterangan: 'Belum Lunas' },
+                            { no: 7, nama: 'Kiky', nomorBayar: '4321', tanggalBayar: '2023-09-15', jumlah: 500, keterangan: 'Lunas' },
+                            { no: 8, nama: 'Rahma', nomorBayar: '0980', tanggalBayar: '2023-09-16', jumlah: 750, keterangan: 'Belum Lunas' },
+                            { no: 9, nama: 'Lily', nomorBayar: '7483', tanggalBayar: '2023-09-15', jumlah: 500, keterangan: 'Lunas' },
+                            { no: 10, nama: 'Novi', nomorBayar: '7347', tanggalBayar: '2023-09-16', jumlah: 750, keterangan: 'Belum Lunas' },
+                            // Tambahkan data lainnya di sini
+                        ];
+                
+                        // Fungsi untuk memperbarui tabel
+                        function updateTable(data) {
+                            const tableBody = document.getElementById('tableBody');
+                            tableBody.innerHTML = '';
+                
+                            data.forEach((item, index) => {
+                                const row = document.createElement('tr');
+                                row.innerHTML = `
+                                    <td>${item.no}</td>
+                                    <td>${item.nama}</td>
+                                    <td>${item.nomorBayar}</td>
+                                    <td>${item.tanggalBayar}</td>
+                                    <td>${item.jumlah}</td>
+                                    <td>${item.keterangan}</td>
+                                `;
+                                tableBody.appendChild(row);
+                            });
+                        }
+                
+                        // Inisialisasi tabel dengan data awal
+                        updateTable(data);
+                
+                        // Fungsi untuk mengatur event listener pada tombol "Show All"
+                        document.getElementById('showButton').addEventListener('click', () => {
+                            updateTable(data);
+                        });
+                
+                        // Fungsi untuk mengatur event listener pada input "Search"
+                        document.getElementById('searchInput').addEventListener('input', () => {
+                            const searchValue = document.getElementById('searchInput').value.toLowerCase();
+                            const filteredData = data.filter(item =>
+                                item.nama.toLowerCase().includes(searchValue) ||
+                                item.nomorBayar.toLowerCase().includes(searchValue) ||
+                                item.keterangan.toLowerCase().includes(searchValue)
+                            );
+                            updateTable(filteredData);
+                        });
+                    </script>
+                    </div>
+
+                    
 
                 <hr>
 
