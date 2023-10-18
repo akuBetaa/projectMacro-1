@@ -23,7 +23,73 @@
 
 <body>
     <div class="main-container d-flex">
-        <div id="sidebar-admin"></div>
+        <!-- <div id="sidebar-admin"></div> -->
+        <div class="sidebar" id="sidebar-admin">
+            <div class="header-box px-2 m-3 pt-3 pb-4 d-flex justify-content-between">
+                <h1 class="fs-4">
+                    <!-- <span class="sim text-light rounded shadow px-2 me-2">SIM</span> -->
+                    <span class="text-white">SIM Akademik</span>
+                </h1>
+        
+                <button class="btn d-md-none d-block close-btn px-1 py-0 text-white">
+                    <i class="fal fa-stream"></i>
+                </button>
+            </div>
+        
+            <hr class="h-color" />
+        
+            <ul class="list-unstyled px-2">
+                <li class="mb-2">
+                    <a href="dashboard-admin.html" class="text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-dashboard.png" alt="" />
+                        Dashboard
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="jadwal-admin.html" class="text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-jadwal.png" alt="" />
+                        Jadwal
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <div class="dropdown-open">
+                        <a href="#" class="text-decoration-none px-3 py-2 d-block" type="text-white" id="dropdownMenuButton2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/img/icon-rapot.png" alt="" />
+                            Raport Siswa
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item" href="raport-siswa.html">Raport</a></li>
+                            <li><a class="dropdown-item" href="input-raport.html">Input Raport</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-2">
+                    <a href="keuangan-admin.html" class="text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-keuangan.png" alt="" />
+                        Keuangan
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="data-siswa.html" class="text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-datasiswa.png" alt="" />
+                        Data Siswa
+                    </a>
+                </li>
+            </ul>
+        
+            <hr class="h-color mx-2" />
+        
+            <ul class="list-unstyled px-2">
+                <li class="">
+                    <a href="/index.html"" class=" text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-logout.png" alt="" />
+                        Log Out
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
 
         <div class="content">
             <nav class="navbar navbar-expand-md navbar-light">

@@ -23,7 +23,59 @@
 
 <body>
     <div class="main-container d-flex">
-        <div id="sidebar-user"></div>
+        <!-- <div id="sidebar-user"></div> -->
+        <div class="sidebar" id="sidebar-user">
+            <div class="header-box px-2 m-3 pt-3 pb-4 d-flex justify-content-between">
+                <h1 class="fs-4">
+                    <!-- <span class="sim text-light rounded shadow px-2 me-2">SIM</span> -->
+                    <span class="text-white">SIM Akademik</span>
+                </h1>
+        
+                <button class="btn d-md-none d-block close-btn px-1 py-0 text-white">
+                    <i class="fal fa-stream"></i>
+                </button>
+            </div>
+        
+            <hr class="h-color" />
+        
+            <ul class="list-unstyled px-2">
+                <li class="mb-2">
+                    <a href="index.html" class="text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-dashboard.png" alt="" />
+                        Dashboard
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="jadwal.html" class="text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-jadwal.png" alt="" />
+                        Jadwal
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="rapor.html" class="text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-rapot.png" alt="" />
+                        Raport Siswa
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="keuangan.html" class="text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-keuangan.png" alt="" />
+                        Keuangan
+                    </a>
+                </li>
+            </ul>
+            <hr class="h-color mx-2" />
+        
+            <ul class="list-unstyled px-2">
+                <li class="mb-2">
+                    <a href="/index.html"" class=" text-decoration-none px-3 py-2 d-block">
+                        <img src="/img/icon-logout.png" alt="" />
+                        Log Out
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
 
         <div class="content">
             <nav class="navbar navbar-expand-md navbar-light">
@@ -40,12 +92,13 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fal fa-bars"></i>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end my-2" id="navbarSupportedContent">
+
+                    <div class="collapse navbar-collapse justify-content-end my-2 " id="navbarSupportedContent">
                         <div class="navbar-nav mb-2 mb-lg-0 ml-3 d-flex align-items-center">
                             <img src="/img/icon-dash-siswa.png" alt="Foto User"
                                 class="img-thumbnail rounded-circle mx-2" style="max-width: 50px;">
-                            <div class="nav-item no-arrow">
-                                <p class="mb-0">Admin</p>
+                            <div class="nav-item no-arrow profilku">
+                                <p class="mb-0">Wali Murid</p>
                                 <span class="">Beta Nurul Awwalin</span>
                             </div>
                         </div>
