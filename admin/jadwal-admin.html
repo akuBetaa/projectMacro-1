@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Input Rapor | Beta</title>
+    <title>Jadwal Siswa | Admin </title>
 
     <link rel="stylesheet" href="/css/style.css" />
 </head>
@@ -56,41 +56,132 @@
             <!-- Isi Konten di Bawah -->
             <div class="dashboard-content">
                 <h2 class="fs-4 m-4">Jadwal Pelajaran Siswa</h2>
+                
+                <div class="card m-4">
+                    <h5 class="card-header" style="background-color: #ff8a00; color: white">
+                        Pilih Kelas
+                    </h5>
 
-                <div class="card m-4 ">
-                    <!-- <div class="card-body m-1">
-                        <h6>Pilih Kelas :</h6>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Pilih Kelas</option>
-                            <option value="1">Kelas I</option>
-                            <option value="2">Kelas II</option>
-                            <option value="3">Kelas III</option>
-                          </select>
-                          <div class="text-center my-4">
-                            <button type="submit" class="form-raport btn" style="background-color: #ff8a00; color: white; display: inline-block;" >
-                                Tambahkan
-                            </button>
-                    </div>
-                </div> -->
-                <div class="card-body m-1" style="display: flex; align-items: center;">
-                    <h6 style="flex: 1;">Pilih Kelas :</h6>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Pilih Kelas</option>
-                        <option value="1">Kelas I</option>
-                        <option value="2">Kelas II</option>
-                        <option value="3">Kelas III</option>
+                    <!-- Form masukkan tahun ajar, semester, dan kelas + klik tampil -->
+                    <div class="card-body">
+                        <!-- Dropdown untuk memilih kelas -->
+                    <select id="kelasDropdown" class="form-select my-3">
+                        <option value="">Pilih Kelas</option>
+                        <option value="1">Kelas 1</option>
+                        <option value="2">Kelas 2</option>
+                        <option value="3">Kelas 3</option>
+                        <option value="4">Kelas 4</option>
+                        <option value="5">Kelas 5</option>
+                        <option value="6">Kelas 6</option>
                     </select>
-                    <button type="submit" class="form-raport btn" style="background-color: #ff8a00; color: white; display: inline-block;">Tambahkan</button>
+            
+                    <!-- Dropdown untuk memilih nama siswa -->
+                   
+            
+                    <!-- Tabel Jadwal Pelajaran -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Jam</th>
+                                <th>Senin</th>
+                                <th>Selasa</th>
+                                <th>Rabu</th>
+                                <th>Kamis</th>
+                                <th>Jumat</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Data Jadwal Pelajaran akan diisi melalui JavaScript -->
+                        </tbody>
+                    </table>
                 </div>
-                
+            
+                <script>
+                    // Data jadwal pelajaran contoh
+                    const jadwalPelajaran = {
+                        kelas1: {
+                            
+                                jam: '08:00 - 09:30', 
+                                senin: 'Matematika',
+                                selasa: 'Bahasa Inggris',
+                                rabu: 'Seni',
+                                kamis: 'Pendidikan Jasmani',
+                                jumat: 'Bahasa Indonesia',
+                        
+                       
+                        },
+                        kelas2: {
+                            
+                                jam: '08:00 - 09:30', 
+                                senin: 'PKN',
+                                selasa: 'Bahasa Inggris',
+                                rabu: 'Seni',
+                                kamis: 'Pendidikan Jasmani',
+                                jumat: 'Bahasa Indonesia',
+                            
+                     
+                        },
+                        // Tambahkan data jadwal pelajaran untuk kelas 2, 3, 4, 5, dan 6 di sini
+                    };
+            
+                    // Fungsi untuk memperbarui tabel jadwal pelajaran
+                    function updateJadwalPelajaran(kelas) {
+                        const tableBody = document.getElementById('tableBody');
+                        tableBody.innerHTML = '';
+            
+                        const data = jadwalPelajaran[`kelas${kelas}`];
+                        let no = 1;
+            
+                        for (let hari in data) {
+                            if (hari === 'jam') {
+                                continue;
+                            }
+            
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${no++}</td>
+                                <td>${data.jam}</td>
+                                <td>${data[hari]}</td>
+                                <td>${data[hari]}</td>
+                                <td>${data[hari]}</td>
+                                <td>${data[hari]}</td>
+                                <td>${data[hari]}</td>
+                               
+                           
+                            `;
+                            tableBody.appendChild(row);
+                        }
+                    }
+            
+                    // Inisialisasi tabel dengan jadwal pelajaran kelas 1 dan nama siswa 1
+                    // updateJadwalPelajaran(1, 'siswa1');
+            
+                    // Fungsi untuk mengatur event listener pada dropdown kelas
+                    document.getElementById('kelasDropdown').addEventListener('change', () => {
+                        const selectedKelas = document.getElementById('kelasDropdown').value;
+                        // const selectedSiswa = document.getElementById('siswaDropdown').value;
+                        updateJadwalPelajaran(selectedKelas);
+                    });
+            
+                    // Fungsi untuk mengatur event listener pada dropdown nama siswa
+                    document.getElementById('siswaDropdown').addEventListener('change', () => {
+                        const selectedKelas = document.getElementById('kelasDropdown').value;
+                        // const selectedSiswa = document.getElementById('siswaDropdown').value;
+                        updateJadwalPelajaran(selectedKelas);
+                    });
+                </script>
+                    </div>
+                </div>
 
-                
-            </div>
-            <hr>
+                <hr>
 
-            <div class="text text-center">
-                <p>Copyright @2023 WebDev B. All rights reserved</p>
+                <div class="text text-center">
+                    <p>Copyright @2023 WebDev B. All rights reserved</p>
+                </div>
             </div>
+            <!-- </div>   -->
+           
         </div>
     </div>
 
