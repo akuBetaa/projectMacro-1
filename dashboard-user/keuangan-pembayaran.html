@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dedca05a0a.js" crossorigin="anonymous"></script>
+    <title>Dasboard | Beta</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="main-container d-flex">
+        <div id="sidebar-user"></div>
+
+        <div class="content">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between d-md-none d-block">
+                        <button class="btn px-1 py-0 open-btn me-2">
+                            <i class="fal fa-stream"></i>
+                        </button>
+                        <a class="navbar-brand fs-4" href="#"><span class="bg-dark rounded px-2 py-0 text-white">SIM
+                                AKADEMIK</span></a>
+                    </div>
+                    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fal fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item no-arrow">
+                                <p class="">Admin</p>
+                                <span class="">Beta Nurul Awwalin</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Isi Konten di Bawah -->
+            
+            <div class="m-5">
+                <nav aria-label="breadcrumb" class="breadcrumb bg-transparent">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">Rincian Pembayaran</li>
+                      <li class="breadcrumb-item active">Konfirmasi Pembayaran</li>
+                      <li class="breadcrumb-item" aria-current="page">Selesai</li>
+                    </ol>
+                  </nav>
+            </div>
+
+            <div class="m-5 text-center">
+                <p class="fw-bold" style="font-size: 15px;">Lakukan Pembayaran Sebelum:</p>
+                <p style="color: #646464;font-size: 12px;">Batas Waktu Pembayaran</p>
+                <p class="fw-bold" style="color: #FF8A00;font-size: 30px;">Kamis, 28 September 2023, 23.59.00</p>
+            </div>
+
+            <div class="card m-5 rounded-4 shadow">
+                <h5 class="card-header p-4">
+                    <i class="fa-regular fa-credit-card m-2"></i>
+                    Detail Info Pembayaran
+                </h5>
+                <div class="card-body m-2">
+                    <div class="row">
+                        <div class="col-12 p-4">
+                            <div class="card rounded-4">
+                                <div class="m-4 p-1 lh-1">
+                                    <p style="color: #646464;">Metode Pembayaran</p>
+                                    <p class="fw-bold">Bank Negara Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 p-4">
+                            <div class="card rounded-4">
+                                <div class="m-4 p-1">
+                                    <div class="row">
+                                        <div class="col-6 lh-1">
+                                            <p style="color: #646464;">No. Virtual Account</p>
+                                            <p class="fw-bold">09685650795976945795</p>
+                                        </div>
+                                        <div class="col-6 text-end">
+                                            <button type="button" class="btn" 
+                                                style="background-color: #fff; color: black; border-radius: 10px; border: 1px solid #B6B6B6;">
+                                                Salin No. VA
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 p-4">
+                            <div class="card rounded-4">
+                                <div class="m-4 p-1">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="fw-bold">Total Pembayaran</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="fw-bold text-end" style="color: #FF8A00;">Rp. 184.000,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card m-5 rounded-4 shadow">
+                <h5 class="card-header p-4">
+                    <i class="fa-solid fa-circle-check" style="color: #1bb66e;"></i>
+                    Cara Pembayaran
+                </h5>
+                <div class="row m-5">
+                    <div class="col-12">
+                        <div class="input-group mb-3">
+                            <button id="toggle-button" onclick="toggleText(1)" class="arrow-button" 
+                            style="border-radius: 10px; width: 100%; height: 36px;">Melalui ATM BNI </button>
+                            <ul class="hidden-text" id="text1">
+                                <li>Masukkan Kartu Anda</li>
+                                <li>Pilih Bahasa</li>
+                                <li>Masukkan PIN ATM Anda</li>
+                                <li>Pilih "Menu Lainnya"</li>
+                                <li>Pilih "Transfer"</li>
+                                <li>Pilih Jenis rekening yang akan Anda gunakan (Contoh:"Dari Rekening Tabungan")</li>
+                                <li>Pilih "Virtual Account Billing (VA)"</li>
+                                <li>Masukkan 16 digit Nomor VA Anda (contoh : 83850+Nomor Induk Mahasiswa/NIM 11 digit)</li>
+                                <li>Tagihan yang harus dibayarkan akan muncul pada layar konfirmasi</li>
+                                <li>Konfirmasi, apabila telah sesuai, lanjutkan transaksi</li>
+                                <li>Transaksi telah selesai.</li>
+                            </ul>
+                            <button id="toggle-button" onclick="toggleText(2)" class="arrow-button mt-5" 
+                            style="border-radius: 10px; width: 100%; height: 36px;">BNI Mobile Banking </button>
+                            <ul class="hidden-text" id="text2">
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                            <button id="toggle-button" onclick="toggleText(3)" class="arrow-button mt-5" 
+                            style="border-radius: 10px; width: 100%; height: 36px;">Melalui Teller BNI </button>
+                            <ul class="hidden-text" id="text3">
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                            <button id="toggle-button" onclick="toggleText(4)" class="arrow-button mt-5" 
+                            style="border-radius: 10px; width: 100%; height: 36px;">Melalui E-Wallet </button>
+                            <ul class="hidden-text" id="text4">
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <a href="keuangan-berhasil.html" class="btn" style="border-radius: 15px;
+                border: 1px solid #B6B6B6;
+                background: #FF8A00;
+                width: 693px;
+                height: 38px;
+                ">Cek Status Pembayaran</a>
+                <a href="keuangan.html" class="btn mb-5 mt-3" style="color: #FF8A00;
+                background: none;
+                width: 693px;
+                height: 38px;
+                ">Batalkan Pembayaran</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="/js/script.js"></script>
+
+    <script>
+        function toggleText(buttonNumber) {
+          var textElement = document.getElementById("text" + buttonNumber);
+          if (textElement.style.display === "block") {
+            textElement.style.display = "none";
+          } else {
+            textElement.style.display = "block";
+          }
+        }
+      </script>
+
+    <script>
+        $(".sidebar ul li").on("click", function () {
+            $(".sidebar ul li.active").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        $(".open-btn").on("click", function () {
+            $(".sidebar").addClass("active");
+        });
+
+        $(".close-btn").on("click", function () {
+            $(".sidebar").removeClass("active");
+        });
+    </script>
+</body>
+
+</html>
